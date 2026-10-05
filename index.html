@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="fr"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chasse au trésor</title>
+
+<style> body { font-family: Arial, sans-serif; text-align: center; padding: 60px 20px; } input { padding: 15px; font-size: 18px; width: 250px; max-width: 90%; text-align: center; } button { margin-top: 15px; padding: 15px 30px; font-size: 18px; cursor: pointer; } #message { margin-top: 20px; font-weight: bold; } </style>
+
+</head>
+
+<body>
+
+<h1>🔑 Entrez votre clé</h1>
+
+<p>Entrez la clé que vous avez trouvée sur la carte.</p>
+
+<input id="cle" type="text" placeholder="Votre clé">
+
+<br>
+
+<button onclick="verifier()">Valider</button>
+
+<div id="message"></div>
+
+<script> function verifier() { const cle = document.getElementById("cle").value.trim(); // 👉 REMPLACE CETTE CLÉ PAR LA TIENNE const bonneCle = "57PC19AR6L"; if (cle.toUpperCase() === bonneCle) { document.getElementById("message").innerHTML = "✅ Bravo ! <br><br>" + "<a href='https://www.youtube.com/watch?v=TONLIEN' target='_blank'>" + "👉 Voir la vidéo" + "</a>"; } else { document.getElementById("message").innerHTML = "❌ Cette clé n'est pas correcte."; } } </script>
+
+</body> </html>
